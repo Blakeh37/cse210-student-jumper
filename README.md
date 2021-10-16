@@ -34,4 +34,7 @@ root                    (project root folder)
 
 ## Authors
 ---
-* TODO: Add your names and emails here
+* TODO: 
+* Blake Hollingsworth - Hol20048@byui.edu
+* Hyrum Hilamatu - Hyrum.hilamatu@gmail.com
+* Martin Sander - msander1987@gmail.com
