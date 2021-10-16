@@ -3,12 +3,14 @@ Calls all the classes and methods
 """
 from game.cutter import Cutter
 from game.jumper import Jumper
+from game.console import Console
 
 class Director:
 
     def __init__(self):
         self.cutter = Cutter()
-        self.jumper =Jumper()
+        self.jumper = Jumper()
+        self.console = Console()
         self.keep_playing = True
         self.guess = ''
         self.win = ''
@@ -16,7 +18,7 @@ class Director:
     def start_game(self):
         #assign the random word
         self.cutter.pick_random_word()
-        print(self.cutter.blank_spaces())
+        self.console.print_stuff(self.cutter.blank_spaces())
 
         while self.keep_playing:
             self.get_inputs()
@@ -40,6 +42,8 @@ class Director:
         print(self.output)
         print(self.win)
         print(self.cutter.clean_list)
+        if self.output == 'Game Over':
+            self.console.print_stuff(f"The word was {self.cutter.word_to_guess}")
 
 
 

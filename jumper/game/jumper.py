@@ -1,11 +1,12 @@
 """
 guesses a letter 
 """
+from game.console import Console 
 
 class Jumper:
     def __init__(self):
-        pass
+        self.console = Console()
     
     def guess(self):
-        letter = input('Guess a letter [a-z]: ')
+        letter = self.console.read_stuff('Guess a letter [a-z]: ')
         return letter 
